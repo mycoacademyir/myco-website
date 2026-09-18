@@ -2,24 +2,29 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>MYCO Academy | مجیک ماشروم، سیلوسایبین و تحقیقات علمی</title>
 
-  <meta name="description" content="MYCO Academy؛ مرجع آموزشی درباره مجیک ماشروم، سیلوسایبین، میکرودوزینگ، تحقیقات علمی، اثرات و نکات ایمنی.">
+  <meta name="description"
+    content="MYCO Academy؛ مرجع آموزشی درباره مجیک ماشروم، سیلوسایبین، میکرودوزینگ، تحقیقات علمی، اثرات مغزی و نکات ایمنی.">
 
-  <meta name="keywords" content="مجیک ماشروم, قارچ جادویی, سیلوسایبین, میکرودوزینگ, تحقیقات سیلوسایبین">
+  <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://mycoacademyir.github.io/myco-website/">
-
-  <meta name="theme-color" content="#07100c">
+  <link rel="canonical"
+    href="https://mycoacademyir.github.io/myco-website/">
 
   <style>
 
+    /* =========================
+       RESET
+    ========================= */
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -27,13 +32,28 @@
     }
 
     body {
-      font-family: Tahoma, Arial, sans-serif;
+      font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+
       background:
-        radial-gradient(circle at 20% 10%, rgba(0,255,170,.10), transparent 25%),
-        radial-gradient(circle at 80% 20%, rgba(0,180,255,.08), transparent 25%),
-        #050806;
-      color: #e9fff4;
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(0, 255, 170, 0.08),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 85% 35%,
+          rgba(0, 200, 255, 0.06),
+          transparent 30%
+        ),
+        #030707;
+
+      color: #f2f7f5;
+
       line-height: 1.9;
+
       overflow-x: hidden;
     }
 
@@ -43,921 +63,1501 @@
     }
 
     .container {
-      width: min(1150px, 92%);
+      width: min(1180px, 92%);
       margin: auto;
     }
 
-    /* HEADER */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
-      position: sticky;
+      position: fixed;
       top: 0;
+      right: 0;
+      left: 0;
+
+      height: 78px;
+
       z-index: 1000;
-      background: rgba(5,8,6,.88);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(67,255,174,.15);
+
+      background:
+        rgba(2, 7, 6, 0.82);
+
+      backdrop-filter: blur(16px);
+
+      border-bottom:
+        1px solid rgba(50, 255, 190, 0.12);
     }
 
     .nav {
-      min-height: 75px;
+      height: 78px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 25px;
     }
+
+
+    /* LOGO */
 
     .logo {
-      font-size: 25px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      color: #62ffc0;
-      text-shadow: 0 0 20px rgba(55,255,170,.45);
-    }
-
-    .logo span {
-      color: #fff;
-    }
-
-    nav {
       display: flex;
-      gap: 25px;
+
       align-items: center;
+
+      gap: 10px;
+
+      font-size: 25px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      color: #45f5b0;
+
+      text-shadow:
+        0 0 20px rgba(69, 245, 176, 0.35);
     }
 
-    nav a {
-      color: #c5d9d0;
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+
+      border: 1px solid #35eaa5;
+
+      border-radius: 50%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-size: 21px;
+
+      box-shadow:
+        0 0 18px rgba(45, 240, 165, 0.25);
+    }
+
+    .logo-text small {
+      display: block;
+
+      font-size: 8px;
+
+      letter-spacing: 4px;
+
+      color: #d5eee5;
+
+      margin-top: -7px;
+    }
+
+
+    /* MENU */
+
+    .menu {
+      display: flex;
+
+      align-items: center;
+
+      gap: 28px;
+
       font-size: 14px;
-      transition: .25s;
+
+      color: #d2ded9;
     }
 
-    nav a:hover {
-      color: #62ffc0;
+    .menu a {
+      transition: 0.25s;
     }
 
-    .admin-btn {
-      padding: 9px 17px;
-      border: 1px solid #48e9a2;
-      border-radius: 30px;
-      color: #65ffc1;
-      transition: .3s;
+    .menu a:hover {
+      color: #40f2ae;
+
+      text-shadow:
+        0 0 15px rgba(64, 242, 174, 0.35);
     }
 
-    .admin-btn:hover {
-      background: #48e9a2;
-      color: #031008;
-      box-shadow: 0 0 25px rgba(72,233,162,.35);
+
+    /* HEADER BUTTONS */
+
+    .header-actions {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
     }
 
-    /* HERO */
+    .header-btn {
+      border:
+        1px solid rgba(60, 245, 174, 0.28);
+
+      padding: 8px 14px;
+
+      border-radius: 25px;
+
+      font-size: 12px;
+
+      color: #42efad;
+
+      transition: 0.25s;
+    }
+
+    .header-btn:hover {
+      background: rgba(52, 239, 170, 0.1);
+
+      border-color: #43efad;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      min-height: 680px;
-      display: flex;
-      align-items: center;
+      min-height: 760px;
+
+      padding-top: 78px;
+
       position: relative;
+
+      display: flex;
+
+      align-items: center;
+
       overflow: hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.15),
+          rgba(0, 0, 0, 0.82)
+        ),
+        url("hero-bg.png") center / cover no-repeat;
     }
 
-    .hero::before {
+    .hero::after {
       content: "";
+
       position: absolute;
-      width: 500px;
-      height: 500px;
-      background: #00ff9d;
-      opacity: .07;
-      filter: blur(100px);
-      border-radius: 50%;
-      left: -150px;
-      top: 50px;
+
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 70% 45%,
+          rgba(40, 255, 175, 0.08),
+          transparent 32%
+        );
+
+      pointer-events: none;
     }
 
     .hero-content {
-      max-width: 820px;
+      width: 100%;
+
       position: relative;
+
       z-index: 2;
     }
 
-    .badge {
-      display: inline-block;
-      border: 1px solid rgba(87,255,181,.3);
-      background: rgba(43,255,158,.06);
-      padding: 7px 16px;
-      border-radius: 30px;
-      color: #65ffc1;
-      font-size: 13px;
-      margin-bottom: 25px;
+    .hero-text {
+      width: 55%;
+
+      margin-right: auto;
+
+      text-align: right;
     }
 
-    .hero h1 {
-      font-size: clamp(38px, 6vw, 72px);
-      line-height: 1.2;
+
+    /* BADGE */
+
+    .badge {
+      display: inline-flex;
+
+      padding: 7px 15px;
+
+      border:
+        1px solid rgba(52, 242, 169, 0.4);
+
+      border-radius: 30px;
+
+      color: #46efad;
+
+      font-size: 11px;
+
       margin-bottom: 25px;
+
+      background:
+        rgba(0, 0, 0, 0.28);
+    }
+
+
+    /* TITLE */
+
+    .hero h1 {
+      font-size: clamp(42px, 5vw, 75px);
+
+      line-height: 1.25;
+
+      margin-bottom: 25px;
+
       font-weight: 900;
     }
 
     .hero h1 span {
-      color: #5dffba;
-      text-shadow: 0 0 30px rgba(55,255,170,.25);
+      color: #48efb0;
+
+      text-shadow:
+        0 0 25px rgba(72, 239, 176, 0.25);
     }
 
-    .hero p {
-      max-width: 720px;
-      color: #a9bbb3;
-      font-size: 18px;
-      margin-bottom: 35px;
+    .hero-description {
+      max-width: 650px;
+
+      color: #c8d5d0;
+
+      font-size: 16px;
+
+      margin-bottom: 32px;
     }
+
+
+    /* BUTTONS */
 
     .hero-buttons {
       display: flex;
-      gap: 15px;
+
+      gap: 14px;
+
       flex-wrap: wrap;
     }
 
     .btn {
-      display: inline-block;
-      padding: 13px 25px;
-      border-radius: 12px;
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 14px 24px;
+
+      border-radius: 13px;
+
       font-weight: bold;
-      transition: .3s;
+
+      font-size: 14px;
+
+      transition: 0.25s;
     }
 
     .btn-primary {
-      background: #50f5ad;
-      color: #031008;
-      box-shadow: 0 0 30px rgba(80,245,173,.18);
+      background: #39e9a5;
+
+      color: #00130d;
+
+      box-shadow:
+        0 0 25px rgba(57, 233, 165, 0.2);
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 40px rgba(80,245,173,.35);
+
+      box-shadow:
+        0 0 35px rgba(57, 233, 165, 0.4);
     }
 
-    .btn-secondary {
-      border: 1px solid #29483a;
-      color: #d9eee5;
-      background: rgba(255,255,255,.02);
+    .btn-outline {
+      border:
+        1px solid rgba(57, 233, 165, 0.35);
+
+      color: #e6f7f0;
+
+      background:
+        rgba(0, 0, 0, 0.25);
     }
 
-    .btn-secondary:hover {
-      border-color: #50f5ad;
-      color: #50f5ad;
+    .btn-outline:hover {
+      border-color: #39e9a5;
+
+      color: #39e9a5;
     }
 
-    /* SECTIONS */
 
-    section {
-      padding: 85px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title .small {
-      color: #5dffba;
-      font-size: 13px;
-      margin-bottom: 8px;
-    }
-
-    .section-title h2 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #91a59c;
-    }
-
-    /* TOPICS */
+    /* =========================
+       TOPICS
+    ========================= */
 
     .topics {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 15px;
-    }
+      margin-top: -65px;
 
-    .topic {
-      background: linear-gradient(145deg, #0b1510, #07100c);
-      border: 1px solid #17291f;
-      border-radius: 18px;
-      padding: 25px 18px;
-      text-align: center;
-      transition: .3s;
-    }
-
-    .topic:hover {
-      transform: translateY(-6px);
-      border-color: #39d994;
-      box-shadow: 0 10px 35px rgba(0,255,160,.08);
-    }
-
-    .topic-icon {
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
-
-    .topic h3 {
-      font-size: 16px;
-      margin-bottom: 7px;
-    }
-
-    .topic p {
-      color: #82968c;
-      font-size: 12px;
-    }
-
-    /* ARTICLES */
-
-    .articles {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .article {
-      background: linear-gradient(145deg, #0c1711, #07100c);
-      border: 1px solid #17291f;
-      border-radius: 20px;
-      padding: 25px;
-      transition: .3s;
       position: relative;
+
+      z-index: 5;
+    }
+
+    .topics-box {
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      background:
+        rgba(3, 10, 9, 0.88);
+
+      backdrop-filter: blur(15px);
+
+      border:
+        1px solid rgba(54, 236, 169, 0.16);
+
+      border-radius: 24px;
+
       overflow: hidden;
     }
 
-    .article::before {
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background: #00ff9d;
-      opacity: .04;
-      filter: blur(30px);
-      top: -30px;
-      left: -20px;
+    .topic {
+      padding: 28px 15px;
+
+      text-align: center;
+
+      border-left:
+        1px solid rgba(255, 255, 255, 0.06);
+
+      transition: 0.25s;
     }
 
-    .article:hover {
-      transform: translateY(-5px);
-      border-color: #35d88e;
+    .topic:last-child {
+      border-left: 0;
     }
 
-    .article-tag {
-      color: #5dffba;
+    .topic:hover {
+      background:
+        rgba(50, 235, 168, 0.05);
+    }
+
+    .topic-icon {
+      font-size: 29px;
+
+      color: #42efad;
+
+      margin-bottom: 8px;
+
+      text-shadow:
+        0 0 15px rgba(66, 239, 173, 0.3);
+    }
+
+    .topic h3 {
+      font-size: 15px;
+
+      margin-bottom: 5px;
+    }
+
+    .topic p {
+      color: #84958f;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================
+       ARTICLES
+    ========================= */
+
+    .articles-section {
+      padding: 100px 0 80px;
+    }
+
+    .section-head {
+      display: flex;
+
+      align-items: end;
+
+      justify-content: space-between;
+
+      margin-bottom: 28px;
+    }
+
+    .section-label {
+      color: #3fe9aa;
+
       font-size: 12px;
-      margin-bottom: 10px;
+
+      font-weight: bold;
+
+      margin-bottom: 5px;
     }
 
-    .article h3 {
-      font-size: 21px;
-      line-height: 1.6;
-      margin-bottom: 12px;
+    .section-title {
+      font-size: 28px;
     }
 
-    .article h3 a:hover {
-      color: #5dffba;
-    }
+    .all-link {
+      color: #43edac;
 
-    .article p {
-      color: #91a59c;
-      font-size: 14px;
-    }
-
-    .read {
-      display: inline-block;
-      margin-top: 15px;
-      color: #5dffba;
       font-size: 13px;
     }
 
-    /* FEATURE */
-
-    .feature {
-      background:
-        linear-gradient(135deg, rgba(46,255,164,.08), rgba(0,150,255,.04)),
-        #09110d;
-      border: 1px solid #1c3b2c;
-      border-radius: 25px;
-      padding: 45px;
+    .articles-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
-      align-items: center;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 18px;
     }
 
-    .feature h2 {
-      font-size: 32px;
-      margin-bottom: 18px;
-    }
-
-    .feature p {
-      color: #9bb0a6;
-      margin-bottom: 20px;
-    }
-
-    .science-box {
-      min-height: 260px;
-      border-radius: 20px;
+    .article-card {
       background:
-        radial-gradient(circle, rgba(75,255,180,.13), transparent 55%),
-        #050906;
-      border: 1px solid #193b2b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 80px;
-      box-shadow: inset 0 0 60px rgba(0,255,150,.04);
-    }
+        linear-gradient(
+          145deg,
+          rgba(9, 22, 19, 0.95),
+          rgba(3, 10, 9, 0.9)
+        );
 
-    /* WARNING */
+      border:
+        1px solid rgba(53, 239, 171, 0.14);
 
-    .warning {
-      background: #171208;
-      border: 1px solid #574316;
       border-radius: 18px;
-      padding: 25px;
-      color: #d8c89b;
+
+      overflow: hidden;
+
+      transition: 0.3s;
     }
 
-    .warning strong {
-      color: #ffd86a;
+    .article-card:hover {
+      transform: translateY(-6px);
+
+      border-color:
+        rgba(53, 239, 171, 0.38);
+
+      box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.35);
     }
 
-    /* ADMIN */
+    .article-image {
+      height: 170px;
 
-    .admin-section {
-      text-align: center;
-    }
-
-    .admin-card {
-      max-width: 700px;
-      margin: auto;
-      padding: 40px 25px;
-      border-radius: 25px;
       background:
-        linear-gradient(145deg, rgba(61,255,170,.08), rgba(0,0,0,.15)),
-        #09110d;
-      border: 1px solid #1e4834;
+        radial-gradient(
+          circle at 50% 30%,
+          rgba(62, 240, 171, 0.28),
+          transparent 35%
+        ),
+        linear-gradient(
+          145deg,
+          #102c25,
+          #04100e
+        );
+
+      position: relative;
     }
 
-    .admin-icon {
-      font-size: 50px;
-      margin-bottom: 15px;
+    .article-image::after {
+      content: "🍄";
+
+      position: absolute;
+
+      font-size: 55px;
+
+      left: 50%;
+
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%);
+
+      filter:
+        drop-shadow(
+          0 0 20px rgba(50, 255, 175, 0.35)
+        );
     }
 
-    .admin-card h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
+    .article-body {
+      padding: 18px;
     }
 
-    .admin-card p {
-      color: #98aaa1;
-      margin-bottom: 22px;
-    }
-
-    .telegram {
+    .article-tag {
       display: inline-block;
-      background: #43e8a0;
-      color: #041009;
-      padding: 12px 25px;
-      border-radius: 12px;
+
+      color: #052116;
+
+      background: #39e9a5;
+
+      padding: 3px 9px;
+
+      border-radius: 20px;
+
+      font-size: 10px;
+
       font-weight: bold;
-      transition: .3s;
+
+      margin-bottom: 12px;
     }
 
-    .telegram:hover {
-      transform: scale(1.04);
-      box-shadow: 0 0 30px rgba(67,232,160,.25);
+    .article-body h3 {
+      font-size: 16px;
+
+      line-height: 1.7;
+
+      margin-bottom: 8px;
     }
 
-    /* FOOTER */
+    .article-body p {
+      color: #8c9c97;
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+      margin-bottom: 12px;
+    }
+
+    .read-more {
+      color: #40edaa;
+
+      font-size: 12px;
+
+      font-weight: bold;
+    }
+
+
+    /* =========================
+       TELEGRAM
+    ========================= */
+
+    .telegram-section {
+      padding: 30px 0 90px;
+    }
+
+    .telegram-box {
+      position: relative;
+
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 35px;
+
+      padding: 40px;
+
+      border-radius: 25px;
+
+      background:
+        linear-gradient(
+          120deg,
+          rgba(5, 31, 24, 0.96),
+          rgba(3, 13, 12, 0.96)
+        );
+
+      border:
+        1px solid rgba(52, 239, 170, 0.22);
+    }
+
+    .telegram-box::before {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(40, 240, 170, 0.06);
+
+      filter: blur(40px);
+
+      left: -100px;
+
+      top: -120px;
+    }
+
+    .telegram-info {
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .telegram-label {
+      color: #3feaad;
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+      margin-bottom: 8px;
+    }
+
+    .telegram-box h2 {
+      font-size: 28px;
+
+      margin-bottom: 8px;
+    }
+
+    .telegram-box p {
+      color: #aabbb5;
+
+      font-size: 14px;
+
+      max-width: 600px;
+    }
+
+    .telegram-buttons {
+      display: flex;
+
+      gap: 10px;
+
+      flex-wrap: wrap;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+
+    /* =========================
+       SAFETY
+    ========================= */
+
+    .safety {
+      padding: 0 0 80px;
+    }
+
+    .safety-box {
+      border:
+        1px solid rgba(255, 205, 80, 0.16);
+
+      background:
+        rgba(40, 31, 9, 0.35);
+
+      border-radius: 18px;
+
+      padding: 25px;
+
+      color: #d8d0b9;
+
+      font-size: 13px;
+    }
+
+    .safety-box strong {
+      color: #f0d36b;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      border-top: 1px solid #14231b;
-      padding: 45px 0 25px;
-      color: #718178;
-      text-align: center;
+      border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+
+      padding: 25px 0;
+
+      background: #020606;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
     }
 
     .footer-logo {
-      color: #5dffba;
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
+      color: #43efad;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
     }
 
     .footer-links {
       display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-      margin: 20px 0;
+
+      gap: 18px;
+
+      color: #899791;
+
+      font-size: 12px;
     }
 
     .footer-links a:hover {
-      color: #5dffba;
+      color: #43efad;
     }
 
-    /* MOBILE */
+    .copyright {
+      color: #68746f;
 
-    @media (max-width: 900px) {
-
-      .topics {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .feature {
-        grid-template-columns: 1fr;
-      }
-
+      font-size: 11px;
     }
 
-    @media (max-width: 650px) {
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 1000px) {
+
+      .menu {
+        gap: 15px;
+      }
+
+      .articles-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .topics-box {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+      .topic:nth-child(3) {
+        border-left: 0;
+      }
+
+      .hero-text {
+        width: 65%;
+      }
+    }
+
+
+    @media (max-width: 750px) {
+
+      header {
+        height: auto;
+      }
 
       .nav {
-        min-height: 65px;
+        min-height: 70px;
+
+        flex-wrap: wrap;
+
+        padding: 10px 0;
       }
 
-      nav {
+      .menu {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+      }
+
+      .header-actions {
         display: none;
       }
 
       .hero {
-        min-height: 590px;
+        min-height: 700px;
+
+        background-position:
+          35% center;
       }
 
-      .hero p {
-        font-size: 15px;
+      .hero-text {
+        width: 100%;
+
+        text-align: center;
+
+        padding-top: 70px;
       }
 
-      section {
-        padding: 60px 0;
+      .hero-description {
+        margin-left: auto;
+
+        margin-right: auto;
       }
 
-      .topics,
-      .articles {
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .topics {
+        margin-top: -35px;
+      }
+
+      .topics-box {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .topic {
+        border-bottom:
+          1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .topic:nth-child(even) {
+        border-left: 0;
+      }
+
+      .articles-grid {
         grid-template-columns: 1fr;
       }
 
-      .feature {
-        padding: 25px;
+      .section-head {
+        align-items: start;
+
+        flex-direction: column;
+
+        gap: 10px;
       }
 
-      .feature h2 {
-        font-size: 25px;
+      .telegram-box {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 28px;
       }
 
-      .science-box {
-        min-height: 190px;
+      .footer-inner {
+        flex-direction: column;
+
+        text-align: center;
+      }
+    }
+
+
+    @media (max-width: 450px) {
+
+      .container {
+        width: 90%;
       }
 
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .topics-box {
+        grid-template-columns: 1fr;
+      }
+
+      .topic {
+        border-left: 0 !important;
+      }
+
+      .telegram-buttons {
+        width: 100%;
+      }
+
+      .telegram-buttons .btn {
+        width: 100%;
+      }
     }
 
   </style>
 </head>
 
+
 <body>
 
-<header>
 
-  <div class="container nav">
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-    <a href="index.html" class="logo">
-      MYCO<span>.</span>
-    </a>
+  <header>
 
-    <nav>
-      <a href="#topics">موضوعات</a>
-      <a href="#articles">مقالات</a>
-      <a href="magic-mushroom.html">مجیک ماشروم</a>
-      <a href="article-what-is-psilocybin.html">سیلوسایبین</a>
-      <a href="microdosing-psilocybin.html">میکرودوزینگ</a>
-    </nav>
-
-    <a class="admin-btn" href="https://t.me/mycoadmin" target="_blank" rel="noopener">
-      ادمین
-    </a>
-
-  </div>
-
-</header>
+    <div class="container nav">
 
 
-<main>
+      <a href="#" class="logo">
 
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="container">
-
-      <div class="hero-content">
-
-        <div class="badge">
-          MYCO ACADEMY • SCIENCE & EDUCATION
+        <div class="logo-icon">
+          🍄
         </div>
 
-        <h1>
-          دنیای <span>مجیک ماشروم</span><br>
-          را علمی بشناسید
-        </h1>
-
-        <p>
-          مرجع آموزشی MYCO برای آشنایی با قارچ‌ها، سیلوسایبین،
-          اثرات آن بر مغز، تحقیقات علمی، میکرودوزینگ و نکات مهم ایمنی.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a href="magic-mushroom.html" class="btn btn-primary">
-            مجیک ماشروم چیست؟
-          </a>
-
-          <a href="#articles" class="btn btn-secondary">
-            مشاهده مقالات
-          </a>
-
+        <div class="logo-text">
+          MYCO
+          <small>ACADEMY</small>
         </div>
 
-      </div>
-
-    </div>
-
-  </section>
+      </a>
 
 
-  <!-- TOPICS -->
+      <nav class="menu">
 
-  <section id="topics">
+        <a href="#">خانه</a>
 
-    <div class="container">
+        <a href="#topics">موضوعات</a>
 
-      <div class="section-title">
+        <a href="#articles">مقالات</a>
 
-        <div class="small">
-          EXPLORE MYCO
-        </div>
-
-        <h2>موضوعات آموزشی</h2>
-
-        <p>
-          اطلاعات را از دیدگاه علمی و آگاهی‌بخش دنبال کنید.
-        </p>
-
-      </div>
-
-
-      <div class="topics">
-
-        <a href="magic-mushroom.html" class="topic">
-
-          <div class="topic-icon">🍄</div>
-
-          <h3>مجیک ماشروم</h3>
-
-          <p>
-            آشنایی علمی با قارچ‌های حاوی سیلوسایبین
-          </p>
-
+        <a href="magic-mushroom.html">
+          مجیک ماشروم
         </a>
 
-
-        <a href="article-what-is-psilocybin.html" class="topic">
-
-          <div class="topic-icon">🧠</div>
-
-          <h3>سیلوسایبین و مغز</h3>
-
-          <p>
-            بررسی اثرات و مکانیسم‌های مرتبط
-          </p>
-
+        <a href="article-what-is-psilocybin.html">
+          سیلوسایبین
         </a>
 
-
-        <a href="microdosing-psilocybin.html" class="topic">
-
-          <div class="topic-icon">🔬</div>
-
-          <h3>میکرودوزینگ</h3>
-
-          <p>
-            بررسی علمی ادعاها و شواهد موجود
-          </p>
-
+        <a href="microdosing-psilocybin.html">
+          میکرودوزینگ
         </a>
 
-
-        <div class="topic">
-
-          <div class="topic-icon">📚</div>
-
-          <h3>تحقیقات علمی</h3>
-
-          <p>
-            مطالعات و یافته‌های پژوهشی
-          </p>
-
-        </div>
+      </nav>
 
 
-        <a href="article-magic-mushroom-safety.html" class="topic">
+      <div class="header-actions">
 
-          <div class="topic-icon">⚠️</div>
+        <a
+          class="header-btn"
+          href="https://t.me/mycoadmin"
+          target="_blank"
+          rel="noopener">
+          👤 ادمین
+        </a>
 
-          <h3>ایمنی و ریسک‌ها</h3>
-
-          <p>
-            شناخت خطرات و اهمیت آگاهی
-          </p>
-
+        <a
+          class="header-btn"
+          href="https://t.me/mycoacademy"
+          target="_blank"
+          rel="noopener">
+          ✈️ کانال
         </a>
 
       </div>
 
     </div>
 
-  </section>
+  </header>
 
 
-  <!-- FEATURE -->
 
-  <section>
+  <!-- =========================
+       HERO
+  ========================= -->
 
-    <div class="container">
+  <main>
 
-      <div class="feature">
+    <section class="hero">
 
-        <div>
+      <div class="container hero-content">
 
-          <div class="article-tag">
-            FEATURED ARTICLE
+        <div class="hero-text">
+
+          <div class="badge">
+            MYCO ACADEMY • SCIENCE & EDUCATION
           </div>
 
-          <h2>
-            سیلوسایبین چگونه روی مغز اثر می‌گذارد؟
-          </h2>
 
-          <p>
-            با نقش سیلوسایبین و سیلوسین، ارتباط آنها با سیستم سروتونین
-            و موضوعات مورد بررسی در تحقیقات علوم اعصاب آشنا شوید.
+          <h1>
+            دنیای
+            <span>مجیک ماشروم</span>
+            را علمی بشناسید
+          </h1>
+
+
+          <p class="hero-description">
+
+            مرجع آموزشی MYCO برای آشنایی با قارچ‌ها،
+            سیلوسایبین، اثرات آن بر مغز، تحقیقات علمی،
+            میکرودوزینگ و نکات مهم ایمنی.
+
           </p>
 
-          <a href="article-what-is-psilocybin.html" class="btn btn-primary">
-            مطالعه مقاله
-          </a>
 
-        </div>
+          <div class="hero-buttons">
 
-        <div class="science-box">
-          🧠
+            <a
+              href="https://t.me/mycoacademy"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary">
+
+              ✈️ عضویت در کانال تلگرام
+
+            </a>
+
+
+            <a
+              href="#articles"
+              class="btn btn-outline">
+
+              📖 مشاهده مقالات
+
+            </a>
+
+          </div>
+
         </div>
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- ARTICLES -->
 
-  <section id="articles">
+    <!-- =========================
+         TOPICS
+    ========================= -->
 
-    <div class="container">
+    <section class="topics" id="topics">
 
-      <div class="section-title">
+      <div class="container">
 
-        <div class="small">
-          LATEST ARTICLES
+        <div class="topics-box">
+
+
+          <a
+            href="magic-mushroom.html"
+            class="topic">
+
+            <div class="topic-icon">
+              🍄
+            </div>
+
+            <h3>
+              مجیک ماشروم
+            </h3>
+
+            <p>
+              آشنایی علمی با قارچ‌های حاوی سیلوسایبین
+            </p>
+
+          </a>
+
+
+          <a
+            href="article-what-is-psilocybin.html"
+            class="topic">
+
+            <div class="topic-icon">
+              🧠
+            </div>
+
+            <h3>
+              سیلوسایبین و مغز
+            </h3>
+
+            <p>
+              اثرات و مکانیسم‌های مرتبط
+            </p>
+
+          </a>
+
+
+          <a
+            href="microdosing-psilocybin.html"
+            class="topic">
+
+            <div class="topic-icon">
+              🧪
+            </div>
+
+            <h3>
+              میکرودوزینگ
+            </h3>
+
+            <p>
+              بررسی علمی ادعاها و شواهد
+            </p>
+
+          </a>
+
+
+          <a
+            href="#articles"
+            class="topic">
+
+            <div class="topic-icon">
+              🔬
+            </div>
+
+            <h3>
+              تحقیقات علمی
+            </h3>
+
+            <p>
+              مطالعات و یافته‌های پژوهشی
+            </p>
+
+          </a>
+
+
+          <a
+            href="article-magic-mushroom-safety.html"
+            class="topic">
+
+            <div class="topic-icon">
+              🛡️
+            </div>
+
+            <h3>
+              ایمنی و ریسک‌ها
+            </h3>
+
+            <p>
+              شناخت خطرات و آگاهی
+            </p>
+
+          </a>
+
+
         </div>
 
-        <h2>آخرین مقالات</h2>
-
-        <p>
-          مطالب آموزشی MYCO را دنبال کنید.
-        </p>
-
       </div>
 
+    </section>
 
-      <div class="articles">
 
 
-        <article class="article">
+    <!-- =========================
+         ARTICLES
+    ========================= -->
 
-          <div class="article-tag">
-            راهنمای علمی
+    <section
+      class="articles-section"
+      id="articles">
+
+      <div class="container">
+
+
+        <div class="section-head">
+
+          <div>
+
+            <div class="section-label">
+              آخرین مقالات
+            </div>
+
+            <h2 class="section-title">
+              مطالب آموزشی MYCO را دنبال کنید
+            </h2>
+
           </div>
 
-          <h3>
-            <a href="magic-mushroom.html">
-              مجیک ماشروم چیست؟ آشنایی علمی با قارچ‌های حاوی سیلوسایبین
-            </a>
-          </h3>
 
-          <p>
-            تعریف مجیک ماشروم، سیلوسایبین، اثرات بر مغز،
-            تحقیقات علمی و نکات مهم ایمنی.
-          </p>
-
-          <a href="magic-mushroom.html" class="read">
-            مطالعه مقاله ←
+          <a
+            href="#articles"
+            class="all-link">
+            مشاهده همه ←
           </a>
 
-        </article>
-
-
-        <article class="article">
-
-          <div class="article-tag">
-            آموزش علمی
-          </div>
-
-          <h3>
-            <a href="microdosing-psilocybin.html">
-              میکرودوزینگ چیست؟ بررسی علمی فواید، اثرات و خطرات
-            </a>
-          </h3>
-
-          <p>
-            بررسی ادعاهای مربوط به خلق‌وخو، تمرکز و خلاقیت
-            و آنچه تحقیقات علمی تاکنون نشان داده‌اند.
-          </p>
-
-          <a href="microdosing-psilocybin.html" class="read">
-            مطالعه مقاله ←
-          </a>
-
-        </article>
-
-
-        <article class="article">
-
-          <div class="article-tag">
-            علوم پایه
-          </div>
-
-          <h3>
-            <a href="article-what-is-psilocybin.html">
-              سیلوسایبین چیست؟ آشنایی علمی با اثرات و تحقیقات
-            </a>
-          </h3>
-
-          <p>
-            آشنایی با ماهیت سیلوسایبین، تبدیل آن به سیلوسین
-            و موضوعات مورد مطالعه در تحقیقات.
-          </p>
-
-          <a href="article-what-is-psilocybin.html" class="read">
-            مطالعه مقاله ←
-          </a>
-
-        </article>
-
-
-        <article class="article">
-
-          <div class="article-tag">
-            ایمنی و آگاهی
-          </div>
-
-          <h3>
-            <a href="article-magic-mushroom-safety.html">
-              خطرات قارچ‌های ناشناس؛ چرا تشخیص علمی اهمیت دارد؟
-            </a>
-          </h3>
-
-          <p>
-            بررسی خطرات تشخیص اشتباه گونه‌ها، آلودگی و
-            اهمیت استفاده از اطلاعات معتبر.
-          </p>
-
-          <a href="article-magic-mushroom-safety.html" class="read">
-            مطالعه مقاله ←
-          </a>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WARNING -->
-
-  <section>
-
-    <div class="container">
-
-      <div class="warning">
-
-        <strong>⚠️ نکته مهم:</strong>
-
-        مطالب MYCO با هدف آموزش و آگاهی ارائه می‌شوند.
-        اطلاعات این سایت جایگزین نظر پزشک یا متخصص نیست و
-        شامل راهنمای تهیه، خرید، فروش یا مصرف مواد کنترل‌شده نمی‌شود.
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ADMIN -->
-
-  <section class="admin-section" id="contact">
-
-    <div class="container">
-
-      <div class="admin-card">
-
-        <div class="admin-icon">
-          💬
         </div>
 
-        <h2>
-          ارتباط با ادمین MYCO
-        </h2>
 
-        <p>
-          برای پرسش‌های آموزشی و علمی درباره مطالب سایت،
-          می‌توانید به ادمین MYCO پیام دهید.
-        </p>
+
+        <div class="articles-grid">
+
+
+          <!-- ARTICLE 1 -->
+
+          <article class="article-card">
+
+            <div class="article-image"></div>
+
+            <div class="article-body">
+
+              <span class="article-tag">
+                راهنمای علمی
+              </span>
+
+              <h3>
+                <a href="magic-mushroom.html">
+                  مجیک ماشروم چیست؟
+                  آشنایی علمی با قارچ‌های حاوی سیلوسایبین
+                </a>
+              </h3>
+
+              <p>
+                تعریف مجیک ماشروم، ارتباط آن با سیلوسایبین،
+                تحقیقات علمی و نکات مهم ایمنی.
+              </p>
+
+              <a
+                href="magic-mushroom.html"
+                class="read-more">
+                مطالعه مقاله ←
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- ARTICLE 2 -->
+
+          <article class="article-card">
+
+            <div class="article-image"></div>
+
+            <div class="article-body">
+
+              <span class="article-tag">
+                علوم پایه
+              </span>
+
+              <h3>
+                <a href="article-what-is-psilocybin.html">
+                  سیلوسایبین چیست؟
+                  آشنایی علمی با اثرات و تحقیقات
+                </a>
+              </h3>
+
+              <p>
+                آشنایی با ماهیت سیلوسایبین،
+                نحوه اثر آن بر مغز و تحقیقات علمی مرتبط.
+              </p>
+
+              <a
+                href="article-what-is-psilocybin.html"
+                class="read-more">
+                مطالعه مقاله ←
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- ARTICLE 3 -->
+
+          <article class="article-card">
+
+            <div class="article-image"></div>
+
+            <div class="article-body">
+
+              <span class="article-tag">
+                آموزش علمی
+              </span>
+
+              <h3>
+                <a href="microdosing-psilocybin.html">
+                  میکرودوزینگ چیست؟
+                  بررسی علمی فواید، اثرات و خطرات
+                </a>
+              </h3>
+
+              <p>
+                بررسی علمی ادعاهای مربوط به میکرودوزینگ،
+                نقش پلاسیبو و محدودیت‌های پژوهش‌ها.
+              </p>
+
+              <a
+                href="microdosing-psilocybin.html"
+                class="read-more">
+                مطالعه مقاله ←
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- ARTICLE 4 -->
+
+          <article class="article-card">
+
+            <div class="article-image"></div>
+
+            <div class="article-body">
+
+              <span class="article-tag">
+                ایمنی و آگاهی
+              </span>
+
+              <h3>
+                <a href="article-magic-mushroom-safety.html">
+                  خطرات قارچ‌های ناشناس؛
+                  چرا نباید به هر منبعی اعتماد کرد؟
+                </a>
+              </h3>
+
+              <p>
+                بررسی خطرات تشخیص اشتباه،
+                آلودگی و اطلاعات نادرست درباره قارچ‌ها.
+              </p>
+
+              <a
+                href="article-magic-mushroom-safety.html"
+                class="read-more">
+                مطالعه مقاله ←
+              </a>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TELEGRAM
+    ========================= -->
+
+    <section class="telegram-section">
+
+      <div class="container">
+
+        <div class="telegram-box">
+
+
+          <div class="telegram-info">
+
+            <div class="telegram-label">
+              📢 کانال رسمی MYCO
+            </div>
+
+            <h2>
+              MYCO Academy
+            </h2>
+
+            <p>
+              جدیدترین مطالب، مقالات علمی،
+              آموزش‌ها و مطالب آموزشی مرتبط با
+              مجیک ماشروم و سیلوسایبین را در کانال
+              MYCO Academy دنبال کنید.
+            </p>
+
+          </div>
+
+
+          <div class="telegram-buttons">
+
+            <a
+              href="https://t.me/mycoacademy"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary">
+
+              ✈️ مشاهده کانال تلگرام
+
+            </a>
+
+
+            <a
+              href="https://t.me/mycoadmin"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline">
+
+              👤 ارتباط با ادمین
+
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SAFETY
+    ========================= -->
+
+    <section class="safety">
+
+      <div class="container">
+
+        <div class="safety-box">
+
+          <strong>
+            ⚠️ نکته مهم:
+          </strong>
+
+          مطالب MYCO با هدف آموزش و آگاهی ارائه می‌شوند.
+          اطلاعات این سایت جایگزین مشاوره تخصصی پزشکی،
+          حقوقی یا سایر متخصصان نیست و نباید به عنوان
+          توصیه برای مصرف یا تهیه مواد مورد استفاده قرار گیرد.
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+
+      <div class="footer-logo">
+        MYCO ACADEMY
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#">
+          خانه
+        </a>
+
+        <a href="#articles">
+          مقالات
+        </a>
+
+        <a
+          href="https://t.me/mycoacademy"
+          target="_blank"
+          rel="noopener">
+          کانال تلگرام
+        </a>
 
         <a
           href="https://t.me/mycoadmin"
           target="_blank"
-          rel="noopener"
-          class="telegram"
-        >
-          ✈️ پیام به @mycoadmin
+          rel="noopener">
+          ادمین
         </a>
 
       </div>
 
-    </div>
 
-  </section>
+      <div class="copyright">
+        © MYCO Academy
+      </div>
 
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-logo">
-      MYCO ACADEMY
-    </div>
-
-    <p>
-      مرجع آموزشی علمی درباره قارچ‌ها، سیلوسایبین و تحقیقات مرتبط
-    </p>
-
-    <div class="footer-links">
-
-      <a href="index.html">خانه</a>
-
-      <a href="magic-mushroom.html">
-        مجیک ماشروم
-      </a>
-
-      <a href="microdosing-psilocybin.html">
-        میکرودوزینگ
-      </a>
-
-      <a href="article-what-is-psilocybin.html">
-        سیلوسایبین
-      </a>
-
-      <a href="article-magic-mushroom-safety.html">
-        ایمنی
-      </a>
-
-      <a
-        href="https://t.me/mycoadmin"
-        target="_blank"
-        rel="noopener"
-      >
-        ادمین
-      </a>
 
     </div>
 
-    <p>
-      © 2026 MYCO Academy — Learn • Explore • Grow
-    </p>
+  </footer>
 
-  </div>
-
-</footer>
 
 </body>
 </html>
